@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Número Nebula: Spanish Counting Game</title>
+  <link rel="stylesheet" href="../common.css">
+  <link rel="stylesheet" href="game.css">
+</head>
+<body>
+  <main class="arcade-container game-shell">
+    <a class="back-link" href="../index.html" aria-label="Back to game menu">← Back to menu</a>
+
+    <header class="hero-panel">
+      <div class="badge">Los Números</div>
+      <h1>Número Nebula</h1>
+      <p class="subtitle">Pilot your starship by counting, translating, and solving number clues in Spanish.</p>
+    </header>
+
+    <section class="card status-card" aria-label="Game progress">
+      <div class="stat">
+        <span class="stat-label">Level</span>
+        <strong id="levelDisplay">1</strong>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Score</span>
+        <strong id="scoreDisplay">0</strong>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Streak</span>
+        <strong id="streakDisplay">0</strong>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Range</span>
+        <strong id="rangeDisplay">0–10</strong>
+      </div>
+    </section>
+
+    <section class="card mission-card">
+      <div class="mission-topline">
+        <p id="missionType">Count the stars</p>
+        <span id="roundDisplay">Round 1</span>
+      </div>
+
+      <div id="prompt" class="prompt" aria-live="polite">Loading mission…</div>
+      <div id="visual" class="visual" aria-hidden="true"></div>
+
+      <div id="choices" class="choices" role="group" aria-label="Answer choices"></div>
+
+      <div id="feedback" class="feedback" aria-live="assertive">Choose an answer to launch!</div>
+
+      <div class="actions">
+        <button id="nextButton" class="secondary-button" type="button" hidden>Next mission</button>
+        <button id="restartButton" class="ghost-button" type="button">Restart</button>
+      </div>
+    </section>
+
+    <section class="card guide-card">
+      <h2>Number chart</h2>
+      <p>Keep this tiny space dictionary nearby as the missions get trickier.</p>
+      <div id="numberChart" class="number-chart"></div>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>

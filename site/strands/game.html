@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¡Hola Hero! - Spanish Greetings Game</title>
+  <link rel="stylesheet" href="../common.css">
+  <link rel="stylesheet" href="game.css">
+</head>
+<body>
+  <main class="arcade-container game-shell">
+    <a class="back-link" href="../index.html" aria-label="Back to game menu">← Back to arcade</a>
+
+    <header class="hero card">
+      <div class="hero-badge" aria-hidden="true">👋</div>
+      <div>
+        <p class="eyebrow">Saludos y Presentaciones</p>
+        <h1>¡Hola Hero!</h1>
+        <p class="subtitle">Travel through a Spanish-speaking plaza, greet new friends, introduce yourself, and collect passport stamps.</p>
+      </div>
+    </header>
+
+    <section class="stats-panel card" aria-label="Game progress">
+      <div class="stat">
+        <span class="stat-label">Score</span>
+        <strong id="score">0</strong>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Streak</span>
+        <strong id="streak">0</strong>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Level</span>
+        <strong id="levelText">1 / 5</strong>
+      </div>
+      <div class="stat wide">
+        <span class="stat-label">Passport</span>
+        <div id="stamps" class="stamps" aria-label="Passport stamps"></div>
+      </div>
+    </section>
+
+    <section class="card play-card" aria-live="polite">
+      <div id="startScreen" class="start-screen">
+        <h2>Ready to meet the plaza?</h2>
+        <p>Pick the best Spanish phrase for each situation. Later levels mix greetings, names, origins, polite responses, and mini conversations.</p>
+        <ul class="lesson-list">
+          <li><strong>Hola</strong> = hello</li>
+          <li><strong>Me llamo…</strong> = my name is…</li>
+          <li><strong>Mucho gusto</strong> = nice to meet you</li>
+        </ul>
+        <button id="startBtn" class="primary-btn">Start your passport</button>
+      </div>
+
+      <div id="gameScreen" class="game-screen hidden">
+        <div class="level-header">
+          <div>
+            <p class="eyebrow" id="levelName">Level 1</p>
+            <h2 id="challengeTitle">Challenge</h2>
+          </div>
+          <span id="questionCount" class="pill">1 / 4</span>
+        </div>
+
+        <div class="scene" id="scene">
+          <div class="character" id="character" aria-hidden="true">🙂</div>
+          <div class="speech">
+            <p id="situation">Situation text</p>
+            <h3 id="prompt">Prompt text</h3>
+          </div>
+        </div>
+
+        <div id="choices" class="choices" role="group" aria-label="Answer choices"></div>
+
+        <div id="feedback" class="feedback hidden"></div>
+
+        <div class="actions">
+          <button id="nextBtn" class="primary-btn hidden">Next</button>
+          <button id="restartBtn" class="ghost-btn">Restart</button>
+        </div>
+      </div>
+
+      <div id="levelScreen" class="level-screen hidden">
+        <div class="stamp-big">⭐</div>
+        <h2 id="levelResultTitle">Stamp earned!</h2>
+        <p id="levelResultText">You completed the level.</p>
+        <button id="continueBtn" class="primary-btn">Continue</button>
+      </div>
+
+      <div id="endScreen" class="end-screen hidden">
+        <div class="stamp-big">🏆</div>
+        <h2>¡Excelente, Hola Hero!</h2>
+        <p id="finalSummary">You filled your passport.</p>
+        <div id="phrasebook" class="phrasebook"></div>
+        <button id="playAgainBtn" class="primary-btn">Play again</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="game.js" defer></script>
+</body>
+</html>

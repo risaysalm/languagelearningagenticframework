@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Comet Carnival - Spanish Colors & Descriptions</title>
+  <link rel="stylesheet" href="../common.css">
+  <link rel="stylesheet" href="game.css">
+</head>
+<body>
+  <main class="game-shell">
+    <a class="back-link" href="../index.html" aria-label="Back to the game index">← Back to index</a>
+
+    <section class="hero-card">
+      <div>
+        <p class="eyebrow">Los Colores y Adjetivos</p>
+        <h1>Color Comet Carnival</h1>
+        <p class="tagline">Paint parade comets by matching Spanish color and description clues. Each level adds trickier adjective agreement!</p>
+      </div>
+      <div class="score-panel" aria-live="polite">
+        <span>Score</span>
+        <strong id="score">0</strong>
+        <span>Streak</span>
+        <strong id="streak">0</strong>
+      </div>
+    </section>
+
+    <section class="status-grid" aria-label="Game progress">
+      <div class="stat-card">
+        <span>Level</span>
+        <strong id="level">1</strong>
+        <small id="levelName">Color Sparks</small>
+      </div>
+      <div class="stat-card">
+        <span>Round</span>
+        <strong><span id="round">1</span>/<span id="roundTotal">8</span></strong>
+        <small>Get 5 correct to level up</small>
+      </div>
+      <div class="stat-card">
+        <span>Accuracy</span>
+        <strong id="accuracy">100%</strong>
+        <small id="progressText">Ready for takeoff</small>
+      </div>
+    </section>
+
+    <section class="play-card">
+      <div class="comet-stage" aria-hidden="true">
+        <div id="comet" class="comet red big">
+          <span class="tail tail-one"></span>
+          <span class="tail tail-two"></span>
+          <span class="face">★</span>
+        </div>
+      </div>
+
+      <div class="challenge-area">
+        <p class="instruction" id="instruction">Choose the best Spanish phrase for this comet:</p>
+        <h2 id="prompt">a big red comet</h2>
+        <div id="choices" class="choices" role="group" aria-label="Answer choices"></div>
+        <div id="feedback" class="feedback" aria-live="assertive">Pick a phrase to launch the comet!</div>
+      </div>
+    </section>
+
+    <section class="learn-card">
+      <h2>Mini Lesson</h2>
+      <ul id="lessonList">
+        <li><strong>rojo/roja</strong> = red</li>
+        <li><strong>azul</strong> = blue</li>
+        <li><strong>grande</strong> = big</li>
+      </ul>
+      <button id="nextButton" class="next-button" type="button">Next comet</button>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>

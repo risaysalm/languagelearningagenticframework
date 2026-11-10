@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verb Quest: Acción Arcade</title>
+  <link rel="stylesheet" href="../common.css">
+  <link rel="stylesheet" href="game.css">
+</head>
+<body>
+  <main class="game-shell">
+    <a class="back-link" href="../index.html" aria-label="Back to game collection">← Back to games</a>
+
+    <section class="hero-card" aria-labelledby="game-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Verbos Comunes • Common Verbs and Actions</p>
+        <h1 id="game-title">Verb Quest: Acción Arcade</h1>
+        <p class="intro">Help the tiny robot act out Spanish verbs. Read the mission, choose the right action, and power up through harder levels.</p>
+      </div>
+      <div class="robot-stage" aria-hidden="true">
+        <div id="bot" class="bot idle">
+          <span class="antenna"></span>
+          <span class="face"><span></span></span>
+          <span class="body-light"></span>
+        </div>
+        <div id="actionWord" class="action-word">¡Vamos!</div>
+      </div>
+    </section>
+
+    <section class="hud" aria-label="Game progress">
+      <div class="stat"><span>Score</span><strong id="score">0</strong></div>
+      <div class="stat"><span>Streak</span><strong id="streak">0</strong></div>
+      <div class="stat"><span>Level</span><strong id="level">1</strong></div>
+      <div class="stat"><span>Mission</span><strong id="round">1/6</strong></div>
+    </section>
+
+    <section class="play-card" aria-live="polite">
+      <div class="level-banner" id="levelBanner">Level 1: Match Spanish verbs to English actions.</div>
+      <div class="prompt-wrap">
+        <p class="prompt-label" id="promptLabel">Choose the English meaning:</p>
+        <h2 id="prompt">correr</h2>
+        <p class="hint" id="hint">Listen with your eyes: many verbs end in -ar, -er, or -ir.</p>
+      </div>
+
+      <div id="choices" class="choices" role="group" aria-label="Answer choices"></div>
+
+      <div id="feedback" class="feedback neutral">Pick an action to begin.</div>
+      <button id="nextBtn" class="next-btn" type="button" disabled>Next mission</button>
+    </section>
+
+    <section class="verb-bank" aria-labelledby="bankTitle">
+      <h2 id="bankTitle">Verb Bank</h2>
+      <p>Study these common action words as you play.</p>
+      <div id="verbBankList" class="verb-grid"></div>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>

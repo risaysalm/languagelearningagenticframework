@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mercado Mágico: Comida y Bebida</title>
+  <link rel="stylesheet" href="../common.css">
+  <link rel="stylesheet" href="game.css">
+</head>
+<body>
+  <main class="game-shell">
+    <a class="back-link" href="../index.html">← Back to games</a>
+
+    <section class="hero-card" aria-labelledby="game-title">
+      <div>
+        <p class="eyebrow">Spanish Food & Drink</p>
+        <h1 id="game-title">Mercado Mágico</h1>
+        <p class="subtitle">Serve hungry market visitors by matching Spanish orders with the right food or drink before your stall closes.</p>
+      </div>
+      <div class="mascot" aria-hidden="true">🥘</div>
+    </section>
+
+    <section class="scoreboard" aria-label="Game progress">
+      <div class="stat">
+        <span class="stat-label">Score</span>
+        <strong id="score">0</strong>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Level</span>
+        <strong id="level">1</strong>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Streak</span>
+        <strong id="streak">0</strong>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Orders</span>
+        <strong><span id="ordersDone">0</span>/<span id="ordersGoal">6</span></strong>
+      </div>
+    </section>
+
+    <section class="market-card">
+      <div class="customer-row">
+        <div class="customer" id="customer" aria-hidden="true">🧑‍🍳</div>
+        <div class="speech-bubble">
+          <p class="prompt-label" id="promptLabel">Translate the order:</p>
+          <h2 id="prompt">el agua</h2>
+          <p id="hint" class="hint">Choose the English meaning.</p>
+        </div>
+      </div>
+
+      <div id="options" class="options" aria-label="Answer choices"></div>
+
+      <div class="feedback" id="feedback" role="status" aria-live="polite">Pick an item to begin serving!</div>
+
+      <div class="actions">
+        <button id="startBtn" type="button">Start new market day</button>
+        <button id="nextBtn" type="button" disabled>Next order</button>
+      </div>
+    </section>
+
+    <section class="learning-card" aria-labelledby="learn-title">
+      <h2 id="learn-title">Today's menu words</h2>
+      <div id="wordList" class="word-list"></div>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
